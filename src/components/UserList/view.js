@@ -1,3 +1,5 @@
+import UserForm from '../UserForm';
+
 export default function UserList({ useUserList }) {
 	const {
 		userList,
@@ -14,8 +16,12 @@ export default function UserList({ useUserList }) {
 	}
 
 	return (
-		<ul>
-			{userList.map((user) => <li>{user.name}</li>)}
-		</ul>
+		<div>
+			<ul>
+				{userList.map((user) => <li>{user.name}</li>)}
+			</ul>
+
+			<UserForm />
+		</div>
 	);
 }
